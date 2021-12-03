@@ -1,0 +1,22 @@
+/* Early adults receive a race number at or above 1000
+Early adults run at 9:30 am
+Late adults run at 11:00 am
+Youth registrants run at 12:30 pm (regardless of registration)
+Didn’t plan for runners that are exactly 18 */
+
+let raceNumber = Math.floor(Math.random() * 1000);
+const earlyRegistered = true;
+const runnerAge = 18;
+if(runnerAge > 18 && earlyRegistered) {
+  raceNumber+=1000;
+}
+
+if(runnerAge > 18 && earlyRegistered) {
+  console.log(`Runner number ${raceNumber} will race at 9:30 am`);
+} else if(runnerAge > 18 && earlyRegistered) {
+  console.log(`Runner number ${raceNumber} will  race at 11:00 am`);
+} else if(runnerAge < 18) {
+  console.log(`Runner number ${raceNumber} will race at 12:30 am`);
+} else {
+  console.log(`Runner number ${raceNumber} please go to the registration desk!`)
+}
